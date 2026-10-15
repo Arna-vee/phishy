@@ -131,9 +131,6 @@ def has_ip(p): return 1 if _IP_RE.match(p.host) else 0
 def has_punycode(p): return 1 if "xn--" in p.host else 0
 
 @feature()
-def uses_https(p): return 1 if p.raw.lower().startswith("https://") else 0
-
-@feature()
 def has_at_symbol(p): return 1 if "@" in p.raw else 0
 
 @feature()
